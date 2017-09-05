@@ -1,7 +1,11 @@
 export default function fillInResult(el, data) {
   const location = document.createElement('h3');
   location.setAttribute('class', 'location');
-  location.innerText = `5-day forecast for ${data.city_name}, ${data.state_code}`;
+  if (data.country_code === 'US') {
+    location.innerText = `5-day forecast for ${data.city_name}, ${data.state_code}`;
+  } else {
+    location.innerText = `5-day forecast for ${data.city_name}, ${data.country_code}`;
+  }
   el.appendChild(location);
 
   const grid = document.createElement('div');
