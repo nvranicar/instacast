@@ -4,3 +4,141 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+
+$c-dark: #393838;
+$c-green: #a4e9a0;
+$c-red: #da8888;
+$c-white: #fafafa;
+
+body {
+  margin: 0;
+  font-family: 'Encode Sans', sans-serif;
+  color: $c-dark;
+  // Background from Subtle Patterns
+  background: url('/images/crossword.png');
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: none;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 65rem;
+  padding: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  border: 0.1rem solid $c-dark;
+  // Background from Subtle Patterns
+  background: url('/images/weather.png');
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+.input {
+  display: flex;
+  background: $c-white;
+  border-bottom: 0.1rem solid $c-dark;
+  margin: -0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  flex-wrap: wrap;
+  * + * {
+    margin-left: 0.5rem;
+  }
+}
+
+input {
+  flex-grow: 1;
+  height: 2rem;
+  font-size: 1.2rem;
+  background: $c-white;
+  padding-left: 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.search {
+  background: $c-green;
+  &:hover {
+    background: rgba($c-green, 0.65);
+    color: rgba($c-dark, 0.65);
+  }
+}
+
+.reset {
+  background: $c-red;
+  color: $c-white;
+  &:hover {
+    background: rgba($c-red, 0.65);
+    color: rgba($c-white, 0.65);
+  }
+}
+
+.results {
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-text {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 15rem;
+}
+
+.location {
+  margin-left: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(20% - 1rem);
+    flex-grow: 1;
+    min-width: 6rem;
+  }
+}
+
+.card {
+  background: $c-white;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  border: 0.1rem solid $c-dark;
+  border-radius: 0.2rem;
+  text-align: center;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba($c-dark, 0.4);
+}
+
+.weather-icon {
+  width: 5rem;
+}

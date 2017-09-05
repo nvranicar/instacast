@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>instacast</title>
+  <title>InstaCast</title>
   <link rel="stylesheet" href="/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 </head>
+
 <body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">InstaCast</h1>
+      <p class="subtitle">by Nathan Vranicar</p>
+    </div>
+    <div class="box">
+      <div class="input">
+        <input placeholder="Where are you?" class="search-prompt">
+        <button type="submit" class="search">Get Forecast</button>
+        <button class="reset">Reset</button>
+      </div>
+      <div class="results">
+        <h3 class="empty-text">Search a location to get its 5-day weather forecast.</h3>
+      </div>
+    </div>
+  </div>
   <script src="/app.js" charset="utf-8"></script>
 </body>
+
 </html>
