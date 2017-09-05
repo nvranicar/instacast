@@ -20,10 +20,12 @@ searchButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
-  results.innerHTML = '<h3 class="empty-text">Search a location to get its 5-day weather forecast.</h3>';
+  results.innerHTML = `<div class="empty-text">
+    <h3>Search a location to get its 5-day weather forecast.</h3>
+  </div>`;
 });
 
-window.addEventListener("unhandledrejection", function(err, promise) {
+window.addEventListener('unhandledrejection', function(err, promise) {
   form.value = '';
   alert(`We couldn't find that city. Please search by city name followed by state or country code. ex) Lexington, KY or London, GB`);
 });
