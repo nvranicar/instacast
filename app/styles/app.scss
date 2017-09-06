@@ -157,7 +157,7 @@ button {
   width: 5rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 750px) {
   .container {
     padding: 0.2rem;
   }
@@ -168,5 +168,18 @@ button {
 
   input {
     height: 2.5rem;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+
+  .card {
+    min-height: 10rem;
+  }
+
+  .results {
+    overflow: auto;
+    margin-top: 0.5rem;
   }
 }
